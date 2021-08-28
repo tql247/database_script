@@ -4,10 +4,13 @@ from sqlalchemy import Column, ForeignKey
 from sqlalchemy.types import Date, DateTime, Integer, Time
 
 from database.migrations import Base
+from sqlalchemy import MetaData
+
+metadata_obj = MetaData()
 
 
 class Schedule(Base):
-    __tablename__ = 'assignment'
+    __tablename__ = 'chapter'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
 
